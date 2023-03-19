@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/:path(.*)",
+            "destination": "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/:path"
+        },
+        {
+            "source": "/mastery/:path(.*)",
+            "destination": "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/:path"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}

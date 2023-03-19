@@ -1,0 +1,36 @@
+:root {
+    --shadow-color: 296deg 38% 2%;
+    --shadow-elevation-low:
+      0px 0.6px 0.8px hsl(var(--shadow-color) / 0.24),
+      0px 1.1px 1.4px -0.7px hsl(var(--shadow-color) / 0.34),
+      0px 2.5px 3.2px -1.5px hsl(var(--shadow-color) / 0.45);
+    --shadow-elevation-medium:
+      0px 0.6px 0.8px hsl(var(--shadow-color) / 0.25),
+      0px 2.4px 3.1px -0.5px hsl(var(--shadow-color) / 0.33),
+      0px 5.5px 7px -1px hsl(var(--shadow-color) / 0.42),
+      0px 12.4px 15.8px -1.5px hsl(var(--shadow-color) / 0.5);
+    --shadow-elevation-high:
+      0px 0.6px 0.8px hsl(var(--shadow-color) / 0.27),
+      0px 5.7px 7.3px -0.2px hsl(var(--shadow-color) / 0.32),
+      0px 10.7px 13.6px -0.5px hsl(var(--shadow-color) / 0.37),
+      -0.1px 17.4px 22.2px -0.7px hsl(var(--shadow-color) / 0.42),
+      -0.1px 27.7px 35.3px -1px hsl(var(--shadow-color) / 0.47),
+      -0.1px 43.4px 55.3px -1.2px hsl(var(--shadow-color) / 0.52),
+      -0.2px 66.3px 84.5px -1.5px hsl(var(--shadow-color) / 0.57);
+  }
+
+
+
+body{
+    font-family: 'Shantell Sans', cursive;
+    color: whitesmoke;
+}
+
+.App{
+    height: 100vh;
+    background-color: #211522;
+}
+
+.container-app{
+  
+}

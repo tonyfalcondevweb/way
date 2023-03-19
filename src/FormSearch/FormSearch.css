@@ -1,0 +1,27 @@
+#FormSearch{
+    animation-duration: 0.6s;
+}
+
+.formSearch{
+    height: 2.75rem;    
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+.input-formSearch{
+    border: 0;
+}
+
+
+.input-formSearch:focus{
+    box-shadow: none;
+}
+
+.btn-formSearch{
+    color: whitesmoke;
+    background-color: #613659;
+}
+.btn-formSearch:hover{
+    border-color: white;
+    color: whitesmoke;
+    background-color: #61365991;
+}

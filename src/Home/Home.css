@@ -1,0 +1,27 @@
+.solo{
+    padding-top: 25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.solo-formsearch{
+    width: 65%;
+}
+
+.duo{
+    
+}
+
+.duo-container-top{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.duo-formsearch{
+    width: 65%;
+}
+
+.duo-container-bot{
+
+}

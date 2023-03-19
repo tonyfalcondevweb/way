@@ -1,0 +1,59 @@
+/* .resultSearch-body {
+
+} */
+/* 
+.champResult {
+    display: flex;
+}
+
+.card-champ {
+    padding: 1rem 0;
+    display: grid;
+}
+
+
+.imgChampProfil {
+    width: 20px;
+    height: 90px;
+} */
+
+
+/* .erreur-result {
+    display: grid;
+    align-items: center;
+}
+
+.card-1 {
+    animation-delay: 0.3s;
+}
+
+.card-2 {
+    animation-delay: 0.6s;
+}
+
+.card-3 {
+    animation-delay: 0.9s;
+}
+
+.card-4 {
+    animation-delay: 1.2s;
+}
+
+
+
+.categorie{
+    animation-delay: 1.7s;
+} */
+
+
+
+
+
+.container-resultSearch{
+    display: flex;
+    justify-content: center;
+}
+
+.center-resultSearch{
+    padding-top: 25rem;
+}
