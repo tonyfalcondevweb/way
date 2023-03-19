@@ -1,16 +1,14 @@
 import axios from "axios";
 
-export const urlApiYag = "http://localhost:8080/yagAPI/";
+export const urlGetAllCategorie = "/categorie/";
 
-export const urlGetAllCategorie = urlApiYag + "get/categorie";
+export const urlGetAllChampion = "/champion/";
 
-export const urlGetAllChampion = urlApiYag + "get/champion";
-
-export const urlPostCompte = urlApiYag +"post/compte";
+export const urlPostCompte = "/compte/";
 
 
 export const getAllCategorie = () => {
-
+    console.log(urlGetAllCategorie);
     return axios.get(urlGetAllCategorie);
 }
 

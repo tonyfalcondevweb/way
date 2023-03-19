@@ -1,59 +1,112 @@
-/* .resultSearch-body {
-
-} */
-/* 
-.champResult {
+.container-resultSearch {
     display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.card-champ {
-    padding: 1rem 0;
-    display: grid;
+.loading {
+    padding-top: 25rem;
 }
 
-
-.imgChampProfil {
-    width: 20px;
-    height: 90px;
-} */
-
-
-/* .erreur-result {
-    display: grid;
-    align-items: center;
-}
-
-.card-1 {
-    animation-delay: 0.3s;
-}
-
-.card-2 {
-    animation-delay: 0.6s;
-}
-
-.card-3 {
-    animation-delay: 0.9s;
-}
-
-.card-4 {
-    animation-delay: 1.2s;
+.erreur {
+    padding-top: 22rem;
 }
 
 
+.result {
+    display: block;
+}
 
-.categorie{
-    animation-delay: 1.7s;
-} */
-
-
-
-
-
-.container-resultSearch{
+.container-invocateur {
     display: flex;
     justify-content: center;
 }
 
-.center-resultSearch{
-    padding-top: 25rem;
+.invocateur {
+    overflow: hidden;
+    padding-top: 7rem;
+    width: 80%;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr repeat(4, 0);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.champ {
+    box-shadow: var(--shadow-elevation-medium);
+    margin: 0 15px;
+    padding: 0.9rem;
+    border-radius: 10px;
+    text-align: center;
+    height: 35vh;
+    background-color: #3c293e;
+}
+
+.champ-img {
+    width: 90px;
+}
+
+.champ-nom {
+    height: 70px;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.champ-categorie {
+    padding-top: 10px;
+    height: 70px;
+}
+
+.champ-categorie-badge{
+    margin: 4px 4px; 
+}
+
+
+.champ-maitrise {
+    height: 70px;
+    line-height: 70px;
+}
+
+
+.card1 {
+    animation-delay: 0.2s;
+}
+
+.card2 {
+    animation-delay: 0.4s;
+}
+
+.card3 {
+    animation-delay: 0.6s;
+}
+
+.card4 {
+    animation-delay: 0.8s;
+}
+
+.card5 {
+    animation-delay: 1s;
+}
+
+
+.container-categorie {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
+}
+
+.categorie {
+    margin-top: 5rem;
+    height: 10vh;
+    width: 40%;
+    box-shadow: var(--shadow-elevation-medium);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 10vh;
+    background-color: #3c293e;
+    animation-delay: 1s;
 }

@@ -215,35 +215,30 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
     const cardlistChampMasteryId =
         Object.entries(champResult).map(([k, v]) =>
 
-            <div key={k} className={"" + k}>
+            <div key={k} className={"champ animate__animated animate__fadeInDownBig card" + k}>
 
                 <div>
-                    <img className='' src={imgChampProfil + v.baseName + imgFormat} alt="" />
+                    <img className='champ-img rounded-pill border border-3' src={imgChampProfil + v.baseName + imgFormat} alt="" />
                 </div>
 
 
-                <div>
+                <div className='champ-nom fs-4'>
                     {v.nom}
                 </div>
 
 
 
-                <div>
-                    {v.maitrise}
-                </div>
-
-                <div>
+                <div className='champ-categorie'>
                     {Object.entries(v.categorieYag).map(([k, value]) =>
 
-                        v.categorieYag.length - 1 === k
-                            ? value.nom
-
-                            : value.nom + ", "
-
-
-
+                        <span class="badge text-bg-dark champ-categorie-badge"> {value.nom} </span>                            
 
                     )}
+
+                </div>
+
+                <div className='champ-maitrise'>
+                    Points maitrise : {v.maitrise}
                 </div>
 
             </div>
@@ -255,19 +250,20 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
     // Categorie
     const triCategorieResult = categorieResult.sort((a, b) => b.compteur - a.compteur);
 
-    const affichageCategorieResult = Object.entries(triCategorieResult).map(([k, v]) =>
+    const affichageCategorieResult =
+
+        <div className="">
+            {Object.entries(triCategorieResult).map(([k, v]) =>
+
+                v.compteur != 0 ?
+
+                    v.nom + " : " + v.compteur
+                    : null
+            )}
+        </div>
 
 
-        <p key={k} className="">
 
-            {v.compteur != 0 ?
-                v.nom + " : " + v.compteur
-                : null}
-
-        </p>
-
-
-    )
     // 
 
     // Erreur
@@ -317,7 +313,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
     if (load == "load") {
         return (
             <div className='container-resultSearch'>
-                <div className="center-resultSearch">
+                <div className="loading">
                     <Loading />
                 </div>
             </div>
@@ -330,7 +326,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
         if (erreur.nom !== "ok") {
             return (
 
-                <div className=''>
+                <div className='container-resultSearch erreur'>
                     <h2>{erreur.message}</h2>
                 </div>
 
@@ -340,17 +336,29 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
         else if (erreur.nom === "ok") {
 
             return (
-                <div className=''>
-                    <div className="champResult">
+                <div className='container-resultSearch result'>
 
 
-                        {cardlistChampMasteryId}
+                    <div className="container-invocateur">
+                        <div className='invocateur'>
 
+                            {cardlistChampMasteryId}
 
+                        </div>
                     </div>
-                    <div className=''>
-                        {affichageCategorieResult}
+
+
+
+
+                    <div className='container-categorie'>
+                        <div className="categorie animate__animated animate__fadeInRightBig">
+
+                            {affichageCategorieResult}
+
+                        </div>
                     </div>
+
+
                 </div>
             )
 

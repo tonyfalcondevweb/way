@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import FormSearch from '../FormSearch/FormSearch'
 import ResultSearch from '../ResultSearch/ResultSearch';
 import './Home.css'
-import { getAllCategorie, getAllChampion, urlApiYag } from '../apiYag/apiYag';
+import { getAllCategorie, getAllChampion} from '../apiYag/apiYag';
 
 const Home = () => {
 

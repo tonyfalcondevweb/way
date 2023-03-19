@@ -21,11 +21,23 @@ export default defineConfig({
       },
 
 
-      // "/yagAPI/": {
-      //   target: "http://192.168.1.80:8080/yagAPI/get/categorie",
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/yagAPI/, ''),
-      // },
+      "/categorie/": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/get/categorie",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/categorie/, ''),
+      },
+
+      "/champion/": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/get/champion",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/champion/, ''),
+      },
+
+      "/compte/": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/post/compte",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/compte/, ''),
+      },
 
       
     },
