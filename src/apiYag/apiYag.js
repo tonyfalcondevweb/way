@@ -8,7 +8,6 @@ export const urlPostCompte = "/compte/";
 
 
 export const getAllCategorie = () => {
-    console.log(urlGetAllCategorie);
     return axios.get(urlGetAllCategorie);
 }
 
