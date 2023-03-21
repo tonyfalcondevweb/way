@@ -1,26 +1,27 @@
-.solo{
-    padding-top: 20%;
+.solo {
+    padding-top: 25rem;
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
-.solo-formsearch{
+.solo-formsearch {
     width: 65%;
 }
 
 
-.duo-container-top{
+.duo-container-top {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
 }
 
-.duo-formsearch{
+.duo-formsearch {
     width: 65%;
 }
-/* 
-@media screen and (max-width: 1030px) {
+
+/* @media screen and (max-width: 768px) {
     .solo {
-        padding-top: 35%;
+        padding-top: 20rem;
     }
-  } */
+} */
