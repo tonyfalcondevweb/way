@@ -12,8 +12,6 @@
     padding-top: 22rem;
 }
 
-
-
 .result {
     display: block;
 }
@@ -21,32 +19,33 @@
 .container-invocateur {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .invocateur {
-    overflow: hidden;
-    padding-top: 7rem;
-    width: 80%;
-    height: 55vh;
+    margin: 0 6vw;
+    padding-top: 6rem;
+    width: 115rem;
+    height: 35rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 0px;
-    max-width: 1300px;
-    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr repeat(4, 0);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
+    grid-column-gap: 2vw;
+    grid-row-gap: 0px;
 }
 
 .champ {
     box-shadow: var(--shadow-elevation-medium);
-    margin: 0 15px;
-    padding: 0.9rem;
+    /* margin: 0 15px; */
+    width: 100%;
+    padding-top: 0.9rem;
     border-radius: 10px;
     text-align: center;
-    height: 85%;
+    height: 23rem;
     background-color: #3c293e;
+}
+
+.container-img-champ{
+    height: 6rem;
 }
 
 .champ-img {
@@ -54,25 +53,24 @@
 }
 
 .champ-nom {
-    height: 70px;
-    line-height: 70px;
+    height: 4rem;
+    line-height: 2rem;
     font-weight: bold;
+    font-size: 1.2vw;
 }
 
 .champ-categorie {
-    padding-top: 10px;
-    height: 70px;
+    height: 8rem;
 }
 
 .champ-categorie-badge{
-    margin: 4px 4px;
-    font-size: 14px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0.7rem;
 }
 
 
 .champ-maitrise {
-    height: 70px;
-    line-height: 70px;
+    line-height: 2rem;
 }
 
 
@@ -97,6 +95,12 @@
 }
 
 
+
+
+
+
+
+
 .container-categorie {
     overflow: hidden;
     display: flex;
@@ -108,17 +112,91 @@
 .categorie {
     margin-top: 5rem;
     height: 10vh;
-    width: 40%;
+    width: max-content;
     box-shadow: var(--shadow-elevation-medium);
     border-radius: 10px;
     text-align: center;
     line-height: 10vh;
     background-color: #3c293e;
-    animation-delay: 1s;
+    animation-delay: 1s;    
+}
+
+.categorie-result{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 0 1.5rem;
+
+}
+
+.categorie-result > *{
+    padding: 0 1rem;
 }
 
 @media screen and (max-width: 500px) {
+
     .title-erreur {
+        font-size: 5vw;
+    }
+
+
+    
+    .invocateur{
+        display: block;
+        padding: 0 1rem;  
+        width: 100%;
+        height: 100%;
+    }
+    
+    .champ{
+        height: 100vw;
+        margin: 5rem 0;
+        animation: none;
+    }
+    .container-img-champ{
+        height: 25vw;
+    }
+    
+    .champ-img {
+        width: 25vw;
+    }
+    
+    .champ-nom {
+        height: 20vw;
+        font-size: 5vw;
+    }
+    .champ-categorie {
+        height: 35vw;
+    }
+    
+    .champ-maitrise {
+        height: 20vw;
+    }
+
+    .container-categorie {
+        justify-content: baseline;
+        padding: 0 5vw; 
+        height: 100%;
+        width: 100%;    
+    }
+
+    .categorie{
+        margin: 0 1rem 2rem 1rem;
+        animation: none;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .categorie-result{
+        display: block; 
+    }
+
+    .categorie-result > *{
+        padding: 0;
+        margin: 0;
+        height: 15vw;
+        line-height: 15vw;
         font-size: 5vw;
     }
 }

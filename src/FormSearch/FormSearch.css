@@ -26,13 +26,10 @@
 }
 
 
-
-
-
 @media screen and (max-width: 500px) {
 
     .input-formSearch::placeholder{
         font-size: 4vw;
-    }
+    }   
 
 }

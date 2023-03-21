@@ -217,12 +217,12 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
             <div key={k} className={"champ animate__animated animate__fadeInDownBig card" + k}>
 
-                <div>
+                <div className='container-img-champ'>
                     <img className='champ-img rounded-pill border border-3' src={imgChampProfil + v.baseName + imgFormat} alt="" />
                 </div>
 
 
-                <div className='champ-nom fs-4'>
+                <div className='champ-nom'>
                     {v.nom}
                 </div>
 
@@ -252,13 +252,15 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
     const affichageCategorieResult =
 
-        <div className="">
+        <div className="categorie-result">
             {Object.entries(triCategorieResult).map(([k, v]) =>
 
                 v.compteur != 0 ?
-
-                    v.nom + " : " + v.compteur
-                    : null
+                    
+                <p>
+                    {v.nom + " : " + v.compteur}
+                </p>
+                : null
             )}
         </div>
 
