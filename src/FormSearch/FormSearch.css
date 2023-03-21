@@ -11,7 +11,6 @@
     border: 0;
 }
 
-
 .input-formSearch:focus{
     box-shadow: none;
 }
@@ -24,4 +23,16 @@
     border-color: white;
     color: whitesmoke;
     background-color: #61365991;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .input-formSearch::placeholder{
+        font-size: 4vw;
+    }
+
 }
