@@ -1,3 +1,8 @@
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
 :root {
     --shadow-color: 296deg 38% 2%;
     --shadow-elevation-low:
@@ -29,8 +34,4 @@ body{
 .App{
     height: 100vh;
     background-color: #211522;
-}
-
-.container-app{
-  
 }

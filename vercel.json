@@ -9,15 +9,15 @@
             "destination": "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/:path"
         },
         {
-            "source": "/categorie/:path(.*)",
+            "source": "/categorie:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/get/categorie:path"
         },
         {
-            "source": "/champion/:path(.*)",
+            "source": "/champion:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/get/champion:path"
         },
         {
-            "source": "/compte/:path(.*)",
+            "source": "/compte:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/post/compte:path"
         },
         {
