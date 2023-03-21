@@ -20,3 +20,10 @@
     width: 65%;
 }
 
+@media screen and (max-width: 500px) {
+
+    .solo {
+        padding-top: 20rem;
+    } 
+
+}
