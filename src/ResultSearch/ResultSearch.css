@@ -28,10 +28,14 @@
     width: 80%;
     height: 55vh;
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0px;
+    max-width: 1300px;
+    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr repeat(4, 0);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0px; */
 }
 
 .champ {
@@ -40,7 +44,7 @@
     padding: 0.9rem;
     border-radius: 10px;
     text-align: center;
-    height: 35vh;
+    height: 85%;
     background-color: #3c293e;
 }
 
@@ -60,7 +64,8 @@
 }
 
 .champ-categorie-badge{
-    margin: 4px 4px; 
+    margin: 4px 4px;
+    font-size: 14px;
 }
 
 
@@ -110,3 +115,9 @@
     background-color: #3c293e;
     animation-delay: 1s;
 }
+
+@media screen and (max-width: 1570px) {
+    .champ {
+        width: 13rem;
+    }
+  }

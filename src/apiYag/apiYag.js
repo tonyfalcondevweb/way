@@ -1,10 +1,10 @@
 import axios from "axios";
 
-export const urlGetAllCategorie = "/categorie/";
+export const urlGetAllCategorie = "/categorie";
 
-export const urlGetAllChampion = "/champion/";
+export const urlGetAllChampion = "/champion";
 
-export const urlPostCompte = "/compte/";
+export const urlPostCompte = "/compte";
 
 
 export const getAllCategorie = () => {

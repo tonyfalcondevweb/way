@@ -21,22 +21,22 @@ export default defineConfig({
       },
 
 
-      "/categorie/": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/get/categorie",
+      "/categorie": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/get",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/categorie/, ''),
+        // rewrite: (path) => path.replace(/^\/categorie/, ''),
       },
 
-      "/champion/": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/get/champion",
+      "/champion": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/get",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/champion/, ''),
+        // rewrite: (path) => path.replace(/^\/champion/, ''),
       },
 
-      "/compte/": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/post/compte",
+      "/compte": {
+        target: "https://yagapi-production.up.railway.app/yagAPI/post",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/compte/, ''),
+        // rewrite: (path) => path.replace(/^\/compte/, ''),
       },
 
       

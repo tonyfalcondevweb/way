@@ -68,7 +68,7 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
         <div id='FormSearch' className="col align-self-center d-flex justify-content-center">
 
 
-            <form className='col-5 d-flex formSearch rounded-pill' onSubmit={handleSubmit}>
+            <form className='d-flex formSearch rounded-pill' onSubmit={handleSubmit}>
                 <input className='form-control rounded-end-0 rounded-start-pill input-formSearch ps-4' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" autoFocus />
                 <button onClick={handleClick} type="submit" className="btn btn-formSearch border-0 rounded-start-0 rounded-end-pill">WAY?</button>
             </form>

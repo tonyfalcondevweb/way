@@ -1,5 +1,5 @@
 .solo{
-    padding-top: 25rem;
+    padding-top: 20%;
     display: flex;
     justify-content: center;
 }
@@ -8,9 +8,6 @@
     width: 65%;
 }
 
-.duo{
-    
-}
 
 .duo-container-top{
     padding-top: 2rem;
@@ -21,7 +18,9 @@
 .duo-formsearch{
     width: 65%;
 }
-
-.duo-container-bot{
-
-}
+/* 
+@media screen and (max-width: 1030px) {
+    .solo {
+        padding-top: 35%;
+    }
+  } */

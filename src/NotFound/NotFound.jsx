@@ -1,8 +1,9 @@
 import React from 'react'
+import './NotFound.css'
 
 const NotFound = () => {
   return (
-    <div className='align-self-center'>
+    <div className='container-notFound'>
       <h2>Page introuvable.</h2>
     </div>
   )
