@@ -327,7 +327,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
             return (
 
                 <div className='container-resultSearch erreur'>
-                    <h2>{erreur.message}</h2>
+                    <h2 className='title-erreur'>{erreur.message}</h2>
                 </div>
 
 
