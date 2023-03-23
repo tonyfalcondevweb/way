@@ -3,7 +3,7 @@ import axios from "axios";
 export const url = "/api/"
 export const urlMastery = "/mastery/"
 
-const apiValue = import.meta.env.VITE_VERCEL_ENV_RIOT_KEY;
+const apiValue = import.meta.env.VITE_REACT_APP_RIOT_TOKEN_VALUE;
 
 export const summonerRequest = (inputs) => {
     const config = { headers : {        
