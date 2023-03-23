@@ -3,7 +3,7 @@ import axios from "axios";
 export const url = "/api/"
 export const urlMastery = "/mastery/"
 
-const apiKey = "RGAPI-80d16639-21f6-46af-8f1f-416d5bf9f2c1";
+const apiKey = riotToken;
 
 export const summonerRequest = (inputs) => {
     const config = { headers : {        
