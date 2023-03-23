@@ -231,7 +231,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
                 <div className='champ-categorie'>
                     {Object.entries(v.categorieYag).map(([k, value]) =>
 
-                        <span class="badge text-bg-dark champ-categorie-badge"> {value.nom} </span>                            
+                        <span key={k} className="badge text-bg-dark champ-categorie-badge"> {value.nom} </span>                            
 
                     )}
 
@@ -257,7 +257,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
                 v.compteur != 0 ?
                     
-                <p>
+                <p key={k}>
                     {v.nom + " : " + v.compteur}
                 </p>
                 : null
