@@ -6,7 +6,6 @@ import NotFound from './NotFound/NotFound';
 
 function App() {
 
-  console.log(import.meta.env.VITE_REACT_APP_RIOT_TOKEN);
 
 
 
