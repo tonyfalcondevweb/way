@@ -1,4 +1,5 @@
 .container-resultSearch {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -20,13 +21,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-top: 2rem;
 }
 
 .invocateur {
     margin: 0 6vw;
-    padding-top: 6rem;
+    padding-top: 4rem;
     width: 115rem;
-    height: 35rem;
+    height: 30rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 2vw;
@@ -79,19 +81,19 @@
 }
 
 .card2 {
-    animation-delay: 0.4s;
+    animation-delay: 0.3s;
 }
 
 .card3 {
-    animation-delay: 0.6s;
+    animation-delay: 0.4s;
 }
 
 .card4 {
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
 }
 
 .card5 {
-    animation-delay: 1s;
+    animation-delay: 0.6s;
 }
 
 
@@ -102,7 +104,6 @@
 
 
 .container-categorie {
-    overflow: hidden;
     display: flex;
     justify-content: center;
     height: 30vh;
@@ -110,7 +111,7 @@
 }
 
 .categorie {
-    margin-top: 5rem;
+    margin: 5rem 0 0 0;
     height: 10vh;
     width: max-content;
     box-shadow: var(--shadow-elevation-medium);
@@ -118,19 +119,19 @@
     text-align: center;
     line-height: 10vh;
     background-color: #3c293e;
-    animation-delay: 1s;    
+    animation-delay: 0.7s;    
 }
 
 .categorie-result{
     display: flex;
     flex-direction: row;
     text-align: center;
-    padding: 0 1.5rem;
+    padding: 0 1.5vw;
 
 }
 
 .categorie-result > *{
-    padding: 0 1rem;
+    padding: 0 1vw;
 }
 
 @media screen and (max-width: 500px) {

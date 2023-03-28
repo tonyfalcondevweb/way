@@ -215,7 +215,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
     const cardlistChampMasteryId =
         Object.entries(champResult).map(([k, v]) =>
 
-            <div key={k} className={"champ animate__animated animate__fadeInDownBig card" + k}>
+            <div key={k} className={"champ animate__animated animate__fadeInUpBig card" + k}>
 
                 <div className='container-img-champ'>
                     <img className='champ-img rounded-pill border border-3' src={imgChampProfil + v.baseName + imgFormat} alt="" />
@@ -353,7 +353,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
                     <div className='container-categorie'>
-                        <div className="categorie animate__animated animate__fadeInRightBig">
+                        <div className="categorie animate__animated animate__fadeInUpBig">
 
                             {affichageCategorieResult}
 
