@@ -134,7 +134,139 @@
     padding: 0 1vw;
 }
 
-@media screen and (max-width: 500px) {
+
+
+@media screen and (max-width: 1300px) {
+    
+    .invocateur{
+        display: block;
+        padding: 0 20vw;  
+        width: 100%;
+        height: 100%;
+    }
+    
+    .champ{
+        height: 25rem;
+        margin: 5rem 0;
+        animation: none;
+        padding: 1rem 0;
+    }
+    .container-img-champ{
+        height: 6rem;
+    }
+    
+    .champ-img {
+        width: 95px;
+    }
+    
+    .champ-nom {
+        height: 5rem;
+        font-size: 1.5rem;
+    }
+    .champ-categorie {
+        height: 7rem;
+    }
+    
+    .champ-maitrise {
+        /* height: 15rem; */
+        font-size: 1.2rem;
+    }
+
+
+
+
+
+    
+
+    .container-categorie {
+        padding: 0 3rem; 
+        height: 10rem;
+        width: 100%; 
+        margin-bottom: 5rem;   
+    }
+
+    .categorie{
+        display: flex;
+        justify-content: center;
+        margin: 0 1rem 2rem 1rem;
+        animation: none;
+
+    }
+
+
+    .categorie-result{
+        display: flex;
+    }
+
+    .categorie-result > *{
+        padding: 0;
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 1060px){
+
+
+
+    .container-categorie {
+        justify-content: baseline;
+        padding: 0 27vw; 
+        height: 100%;
+        width: 100%;    
+    }
+    
+    .categorie{
+        /* margin: 0 1rem 2rem 1rem; */
+        animation: none;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .categorie-result{
+        display: block; 
+    }
+    
+    .categorie-result > *{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        /* height: 15vw;
+        line-height: 15vw;
+        font-size: 5vw; */
+    }
+    
+    .text-result{
+        height: 3rem;
+        line-height: 3rem;
+    }
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
 
     .title-erreur {
         font-size: 5vw;
@@ -163,6 +295,7 @@
     }
     
     .champ-nom {
+        padding-top: 1vw;
         height: 20vw;
         font-size: 5vw;
     }
@@ -172,8 +305,12 @@
     
     .champ-maitrise {
         height: 20vw;
+        font-size: 4vw;
     }
 
+
+
+    
     .container-categorie {
         justify-content: baseline;
         padding: 0 5vw; 

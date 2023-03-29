@@ -257,7 +257,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
                 v.compteur != 0 ?
                     
-                <p key={k}>
+                <p className='text-result' key={k}>
                     {v.nom + " : " + v.compteur}
                 </p>
                 : null

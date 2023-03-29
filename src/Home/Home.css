@@ -1,8 +1,9 @@
 .solo {
-    padding-top: 25rem;
+    padding: 25rem 0;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
+
 }
 
 .solo-formsearch {
