@@ -27,7 +27,7 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
     // Sinon 
     // l'animation se lance
     // On obtient le pseudo et la validation du bouton
-    const handleClick = () => {
+    const handleClickDuo = () => {
 
         let animationFormSearch = document.getElementById("FormSearch");
 
@@ -54,6 +54,28 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
 
 
 
+
+
+
+    const handleClickChampion = () => {
+
+        let animationFormSearch = document.getElementById("FormSearch");
+
+
+        animationFormSearch.className = animationFormSearch.className + " animate__bounceOut";
+
+
+
+        const timer = setTimeout(() => {
+            setAffichageComposant(actual => "Champion");
+        }, 550);
+        return () => clearTimeout(timer);
+
+
+    }
+
+
+
     // Reset de la saisi dans la barre de recherche
     useEffect(() => {
 
@@ -69,8 +91,17 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
 
 
             <form className='d-flex formSearch rounded-pill' onSubmit={handleSubmit}>
-                <input className='form-control rounded-end-0 rounded-start-pill input-formSearch ps-4' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur"/>
-                <button onClick={handleClick} type="submit" className="btn btn-formSearch border-0 rounded-start-0 rounded-end-pill">WAY?</button>
+                <div className="dropdown rounded-start-pill rounded-end-0 dropdown-formSearch text-reset">
+                    <button className="btn dropdown-toggle btn-dropdown rounded-start-pill rounded-end-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </button>
+                    <ul className="dropdown-menu dropdown-menu-formSearch">
+                        <li><a className="dropdown-item" onClick={handleClickChampion}>Champion</a></li>
+                        <li><a className="dropdown-item" >Classement</a></li>
+                    </ul>
+                </div>
+                <input className='form-control rounded-end-0 rounded-start-0 input-formSearch ps-4' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" />
+                <button onClick={handleClickDuo} type="submit" className="btn btn-formSearch rounded-start-0 rounded-end-pill">WAY?</button>
             </form>
 
 

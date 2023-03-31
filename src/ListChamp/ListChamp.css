@@ -1,0 +1,95 @@
+.container-listChamp {
+    margin: 8rem 35rem 0 35rem;
+    background-color: #3c293e;
+}
+
+.search-listChamp {
+    display: flex;
+    height: 2.5rem;
+}
+
+.name-input {
+    width: 50%;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.input-listChamp {
+    width: 50%;
+    text-align: center;
+}
+
+
+
+.container-card {
+    padding: 1rem 0;
+}
+
+.container-card>* {
+    padding: 1rem 0;
+}
+
+.card-listChamp {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+
+
+
+
+
+
+.start-listChamp {
+    display: flex;
+}
+
+.start-listChamp>* {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.2rem;
+}
+
+.img-listChamp {
+    width: 4rem;
+}
+
+.nom-listChamp {
+    margin-left: 0.7rem;
+}
+
+
+
+
+
+
+
+
+
+.end-listChamp {
+    display: flex;
+}
+
+.end-listChamp>* {
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.categorie-listChamp>* {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.categorie-listChamp:last-child {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1870px) {
+
+    .container-listChamp {
+        margin: 8rem 20% 0 20%;
+    }
+
+}

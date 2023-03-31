@@ -7,6 +7,57 @@
     box-shadow: var(--shadow-elevation-medium);
 }
 
+
+
+
+
+.dropdown-formSearch{
+    color: whitesmoke;
+    background-color: #613659;
+}
+
+.dropdown-formSearch:active{
+    border: none;
+    color: whitesmoke;
+    background-color: #61365991;
+}
+
+.btn-dropdown{
+    border: none;
+    height: 100%;
+    color: whitesmoke;
+}
+
+.dropdown-menu-formSearch{
+    background-color: #61365991;
+}
+
+.dropdown-item{
+    color: whitesmoke;
+}
+
+.dropdown-item:active{
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .input-formSearch{
     border: 0;
 }
@@ -15,12 +66,12 @@
     box-shadow: none;
 }
 
+
 .btn-formSearch{
     color: whitesmoke;
     background-color: #613659;
 }
 .btn-formSearch:hover{
-    border-color: white;
     color: whitesmoke;
     background-color: #61365991;
 }

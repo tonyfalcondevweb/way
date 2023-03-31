@@ -181,9 +181,9 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
                 }
             ).catch(
                 err => {
-                    err => {
-                        console.log(err.response);
-                    }
+
+                    console.log(err.response);
+
                 }
             )
 
@@ -231,7 +231,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
                 <div className='champ-categorie'>
                     {Object.entries(v.categorieYag).map(([k, value]) =>
 
-                        <span key={k} className="badge text-bg-dark champ-categorie-badge"> {value.nom} </span>                            
+                        <span key={k} className="badge text-bg-dark champ-categorie-badge"> {value.nom} </span>
 
                     )}
 
@@ -256,11 +256,11 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
             {Object.entries(triCategorieResult).map(([k, v]) =>
 
                 v.compteur != 0 ?
-                    
-                <p className='text-result' key={k}>
-                    {v.nom + " : " + v.compteur}
-                </p>
-                : null
+
+                    <p className='text-result' key={k}>
+                        {v.nom + " : " + v.compteur}
+                    </p>
+                    : null
             )}
         </div>
 
