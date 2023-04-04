@@ -15,10 +15,10 @@ const ListChamp = ({ allChampYagApi }) => {
 
 
     const handleChangeChampion = (e) => {
-        
+
         const re = new RegExp(e.target.value, 'i');
         const temp = allChampYagApi.filter(entry => Object.values(entry).some(val => typeof val === "string" && val.match(re)));
-    
+
         setSearchChamp(temp);
     }
 
@@ -29,31 +29,25 @@ const ListChamp = ({ allChampYagApi }) => {
     const affichageListChamp =
         Object.entries(searchChamp).map(([k, v]) =>
 
-            <div key={k} className="card-listChamp">
+            <tr className='table-ListChamp-row' key={k}>
 
-                <div className="start-listChamp">
-                    <div className="img-listChamp">
-                        <img className='img-listChamp rounded-pill border border-3' src={imgChampProfil + v.nom + imgFormat} alt="" />
-                    </div>
+                <th scope="row" className='table-img'>
+                    <img className='img-listChamp rounded-pill border border-3' src={imgChampProfil + v.nom + imgFormat} alt="" />
+                </th>
 
-                    <div className="nom-listChamp">
-                        {v.nom}
-                    </div>
-                </div>
+                <td className='table-nom'>
+                    {v.nom}
+                </td>
 
+                <td className='table-categorie'>
+                    {Object.entries(v.categorieCollection).map(([k, value]) =>
 
+                        <span key={k} className="categorie-nom badge text-bg-dark"> {value.nom} </span>
 
-                <div className="end-listChamp">
-                    <div className="categorie-listChamp">
-                        {Object.entries(v.categorieCollection).map(([k, value]) =>
+                    )}
+                </td>
+            </tr>
 
-                            <span key={k} className="badge text-bg-dark"> {value.nom} </span>
-
-                        )}
-                    </div>
-                </div>
-
-            </div>
         )
 
 
@@ -61,19 +55,27 @@ const ListChamp = ({ allChampYagApi }) => {
 
 
     return (
-        <div className='container-listChamp border-0 rounded'>
+        <div className='container-listChamp'>
 
-            <div className='search-listChamp'>
+            <div className='search-listChamp border-0 rounded-top'>
 
                 <div className='name-input'>Champion :</div>
 
-                <input type="text" onChange={handleChangeChampion} className='form-control input-listChamp' placeholder='Nom de champion'/>
+                <input type="text" className='input-listChamp' onChange={handleChangeChampion} placeholder='Nom de champion' />
 
             </div>
 
-            <div className="container-card">
+            <div className="table-reponsive">
+                <table className='table table-ListChamp'>
+                    <tbody>
 
-                {affichageListChamp}
+                        {affichageListChamp}
+
+                    </tbody>
+
+
+                </table>
+
 
             </div>
 

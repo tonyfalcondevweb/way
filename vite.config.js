@@ -22,22 +22,29 @@ export default defineConfig({
 
 
       "/categorie": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/get",
-        // target: "http://localhost:8080/yagAPI/get",
+        // target: "https://yagapi-production.up.railway.app/yagAPI/get",
+        target: "http://localhost:8080/yagAPI/get",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/categorie/, ''),
       },
 
       "/champion": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/get",
-        // target: "http://localhost:8080/yagAPI/get",
+        // target: "https://yagapi-production.up.railway.app/yagAPI/get",
+        target: "http://localhost:8080/yagAPI/get",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/champion/, ''),
       },
 
+      "/classement": {
+        // target: "https://yagapi-production.up.railway.app/yagAPI/get/champion/classement",
+        target: "http://localhost:8080/yagAPI/get/champion",
+        changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/classement/, ''),
+      },
+
       "/compte": {
-        target: "https://yagapi-production.up.railway.app/yagAPI/post",
-        // target: "http://localhost:8080/yagAPI/post",
+        // target: "https://yagapi-production.up.railway.app/yagAPI/post",
+        target: "http://localhost:8080/yagAPI/post",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/compte/, ''),
       },

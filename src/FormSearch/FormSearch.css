@@ -3,6 +3,7 @@
 }
 
 .formSearch{
+    width: max-content;
     height: 2.75rem;    
     box-shadow: var(--shadow-elevation-medium);
 }
@@ -77,10 +78,10 @@
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
 
     .input-formSearch::placeholder{
-        font-size: 4vw;
+        font-size: 3.5vw;
     }   
 
 }

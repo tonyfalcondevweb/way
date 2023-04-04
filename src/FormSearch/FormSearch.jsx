@@ -70,8 +70,23 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
             setAffichageComposant(actual => "Champion");
         }, 550);
         return () => clearTimeout(timer);
+    }
 
 
+    
+    const handleClickClassementChampion = () => {
+
+        let animationFormSearch = document.getElementById("FormSearch");
+
+
+        animationFormSearch.className = animationFormSearch.className + " animate__bounceOut";
+
+
+
+        const timer = setTimeout(() => {
+            setAffichageComposant(actual => "Classement");
+        }, 550);
+        return () => clearTimeout(timer);
     }
 
 
@@ -97,10 +112,10 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
                     </button>
                     <ul className="dropdown-menu dropdown-menu-formSearch">
                         <li><a className="dropdown-item" onClick={handleClickChampion}>Champion</a></li>
-                        <li><a className="dropdown-item" >Classement</a></li>
+                        <li><a className="dropdown-item" onClick={handleClickClassementChampion}  >Classement</a></li>
                     </ul>
                 </div>
-                <input className='form-control rounded-end-0 rounded-start-0 input-formSearch ps-4' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" />
+                <input className='form-control rounded-end-0 rounded-start-0 input-formSearch' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" />
                 <button onClick={handleClickDuo} type="submit" className="btn btn-formSearch rounded-start-0 rounded-end-pill">WAY?</button>
             </form>
 

@@ -21,6 +21,10 @@
             "destination": "https://yagapi-production.up.railway.app/yagAPI/post/compte:path"
         },
         {
+            "source": "/classement:path(.*)",
+            "destination": "https://yagapi-production.up.railway.app/yagAPI/get/champion/classement:path"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }

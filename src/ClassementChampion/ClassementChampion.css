@@ -1,0 +1,48 @@
+
+
+
+.container-ClassementChampion{
+    margin: 4rem 40rem 0 40rem;
+    padding: 0.4rem 0;
+    background-color: #3c293e;
+}
+
+.card-classement{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.rank-classement{
+    padding-right: 3rem;
+    width: 100%;
+    text-align: end;
+    line-height: 4.7rem;
+    font-size: 1.5rem;
+}
+
+.container-img-classement{
+    line-height: 4.7rem;
+}
+
+.img-classement{
+    width: 65px;
+}
+
+.nom-classement{
+    padding-left: 3rem;
+    width: 100%;
+    line-height: 4.7rem;
+    font-size: 1.5rem;
+}
+
+
+/* @media screen and (max-width: 1870px) {
+
+    .container-ClassementChampion {
+        margin: 4rem 20% 0 20%;
+    }
+
+} */

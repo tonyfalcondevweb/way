@@ -4,6 +4,8 @@ export const urlGetAllCategorie = "/categorie";
 
 export const urlGetAllChampion = "/champion";
 
+export const urlGetClassement = "/classement";
+
 export const urlPostCompte = "/compte";
 
 
@@ -14,6 +16,11 @@ export const getAllCategorie = () => {
 export const getAllChampion = () => {
 
     return axios.get(urlGetAllChampion);
+}
+
+export const getAllClassement = () => {
+
+    return axios.get(urlGetClassement);
 }
 
 export const saveCompte = (inputs) => {

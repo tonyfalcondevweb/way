@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import FormSearch from '../FormSearch/FormSearch'
 import ResultSearch from '../ResultSearch/ResultSearch';
 import './Home.css'
-import { getAllCategorie, getAllChampion} from '../apiYag/apiYag';
+import { getAllCategorie, getAllChampion, getAllClassement } from '../apiYag/apiYag';
 import ListChamp from '../ListChamp/ListChamp';
+import ClassementChampion from '../ClassementChampion/ClassementChampion';
 
 const Home = () => {
 
@@ -73,7 +74,7 @@ const Home = () => {
 
   }
 
-  
+
 
   else if (affichageComposant === "Duo") {
 
@@ -117,13 +118,36 @@ const Home = () => {
 
           <div className='duo-container-bot'>
 
-            <ListChamp allChampYagApi={allChampYagApi}/>
+            <ListChamp allChampYagApi={allChampYagApi} />
           </div>
 
         </div>
       </div>
     )
+  }
 
+  else if (affichageComposant === "Classement") {
+
+    return (
+
+      <div className='duo'>
+
+        <div className='duo-container-top'>
+          <div className='duo-formsearch animate__animated animate__backInDown'>
+            <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />
+          </div>
+
+        </div>
+        <div>
+
+          <div className='duo-container-bot'>
+
+            <ClassementChampion />
+          </div>
+
+        </div>
+      </div>
+    )
   }
 }
 
