@@ -62,7 +62,7 @@ const Home = () => {
     return (
 
       <div className='solo'>
-        <div className='solo-formsearch'>
+        <div className='solo-formsearch animate__animated animate__backInDown'>
 
           <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />
 

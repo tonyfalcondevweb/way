@@ -1,5 +1,4 @@
 html {
-  width: 100%;
   height: fill-available;
   height: -webkit-fill-available;
   background-color: #211522;
@@ -34,6 +33,6 @@ body{
 }
 
 .App{
-    height: 100vh;
+    overflow: hidden;
     background-color: #211522;
 }
