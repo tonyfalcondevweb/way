@@ -64,7 +64,6 @@ const Home = () => {
       <div className='solo'>
         <div className='solo-formsearch'>
 
-          {/* <button type="button" className="btn btn-primary btn-champList">Primary</button> */}
           <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />
 
         </div>

@@ -1,4 +1,5 @@
 html {
+  width: fit-content;
   height: fill-available;
   height: -webkit-fill-available;
   background-color: #211522;

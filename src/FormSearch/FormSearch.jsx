@@ -102,7 +102,7 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
 
 
     return (
-        <div id='FormSearch' className="col align-self-center d-flex justify-content-center">
+        <div id='FormSearch' className="">
 
 
             <form className='d-flex formSearch rounded-pill' onSubmit={handleSubmit}>
