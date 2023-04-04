@@ -95,6 +95,10 @@
 
 @media screen and (max-width: 730px) {
 
+    html {
+        width: fit-content;
+      }
+
     .container-listChamp {
         margin: 8rem 0rem 0rem 0rem;
     }

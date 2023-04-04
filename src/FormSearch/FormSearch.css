@@ -81,12 +81,11 @@
 
 @media screen and (max-width: 400px) {
 
-    .input-formSearch::placeholder{
+    /* /* .input-formSearch::placeholder{
         font-size: 3.5vw;
-    }   
+    }    */
 
-    #FormSearch{
-        margin: 0 1rem;
-    }
+
 
 }
+
