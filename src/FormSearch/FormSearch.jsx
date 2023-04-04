@@ -38,7 +38,9 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
         }
         else {
 
-            animationFormSearch.className = " animate__bounceOut";
+            if (affichageComposant == "Solo") {                
+                animationFormSearch.className = " animate__bounceOut";
+            }
 
             setNomInvocateur(actual => nomInvocateur);
 
