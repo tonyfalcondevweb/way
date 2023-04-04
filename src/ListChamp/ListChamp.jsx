@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { imgChampProfil, imgFormat } from '../apiRiot/util';
 import './ListChamp.css'
+import Loading from '../Loading/Loading';
 
 
 
@@ -9,9 +10,20 @@ const ListChamp = ({ allChampYagApi }) => {
 
 
 
-    // console.log(allChampYagApi);
-
+    const [load, setLoad] = useState("load")
     const [searchChamp, setSearchChamp] = useState(allChampYagApi)
+
+
+    useEffect(() => {
+
+
+        const timer = setTimeout(() => {
+            setLoad("ok");
+        }, 700);
+        return () => clearTimeout(timer);
+
+    }, [])
+
 
 
     const handleChangeChampion = (e) => {
@@ -52,36 +64,49 @@ const ListChamp = ({ allChampYagApi }) => {
 
 
 
+    if (load == "load") {
 
-
-    return (
-        <div className='container-listChamp'>
-
-            <div className='search-listChamp border-0 rounded-top'>
-
-                <div className='name-input'>Champion :</div>
-
-                <input type="text" className='input-listChamp' onChange={handleChangeChampion} placeholder='Nom de champion' />
-
+        return (
+            <div className='container-loading'>
+                <div className="loading">
+                    <Loading />
+                </div>
             </div>
 
-            <div className="table-reponsive">
-                <table className='table table-ListChamp'>
-                    <tbody>
+        )
 
-                        {affichageListChamp}
+    }
 
-                    </tbody>
+    else {
+        return (
+            <div className='container-listChamp animate__animated animate__fadeIn'>
+
+                <div className='search-listChamp border-0 rounded-top'>
+
+                    <div className='name-input'>Champion :</div>
+
+                    <input type="text" className='input-listChamp' onChange={handleChangeChampion} placeholder='Nom de champion' />
+
+                </div>
+
+                <div className="table-reponsive">
+                    <table className='table table-ListChamp'>
+                        <tbody>
+
+                            {affichageListChamp}
+
+                        </tbody>
 
 
-                </table>
+                    </table>
+
+
+                </div>
 
 
             </div>
-
-
-        </div>
-    )
+        )
+    }
 }
 
 export default ListChamp;

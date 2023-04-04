@@ -1,5 +1,9 @@
+.container-loading{
+    margin: 0 50%;
+}
+
 .container-listChamp {
-    margin: 8rem 35rem 0rem 35rem;
+    margin: 5.5rem 30em 0rem 30rem;
     padding-bottom: 5rem;
     width: fit-content;
 }
@@ -34,15 +38,11 @@
 }
 
 
-
-
-
-
 .table-ListChamp{
     color: white;
     background-color: #3c293e;
     border: solid;
-    border-width: 0 0.13rem 0.13rem 0.13rem;
+    border-width: 0 0.13rem 0.13rem 0.15rem;
     border-color: #ffffff;
 }
 
@@ -54,8 +54,7 @@
 .table-img{
     width: 25%;
     height: 4rem;
-    line-height: 4rem;
-
+    vertical-align: middle;
 }
 
 .img-listChamp{
@@ -67,7 +66,7 @@
 .table-nom{
     width: 25%;
     height: 4rem;
-    line-height: 4rem;
+    vertical-align: middle;
     font-size: 1.3rem;
 }
 
@@ -87,7 +86,7 @@
 @media screen and (max-width: 1870px) {
 
     .container-listChamp {
-        margin: 8rem 20% 0 20%;
+        margin: 5.5rem 20% 0 20%;
     }
 
 }
@@ -95,11 +94,11 @@
 
 @media screen and (max-width: 730px) {
 
-    html {
+    .App{
         width: fit-content;
       }
 
     .container-listChamp {
-        margin: 8rem 0rem 0rem 0rem;
+        margin: 5.5rem 0rem 0rem 0rem;
     }
 }

@@ -38,7 +38,7 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
         }
         else {
 
-            animationFormSearch.className = animationFormSearch.className + " animate__bounceOut";
+            animationFormSearch.className = " animate__bounceOut";
 
             setNomInvocateur(actual => nomInvocateur);
 
@@ -59,11 +59,6 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
 
     const handleClickChampion = () => {
 
-        let animationFormSearch = document.getElementById("FormSearch");
-
-
-        animationFormSearch.className = animationFormSearch.className + " animate__bounceOut";
-
 
 
         const timer = setTimeout(() => {
@@ -75,11 +70,6 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
 
     
     const handleClickClassementChampion = () => {
-
-        let animationFormSearch = document.getElementById("FormSearch");
-
-
-        animationFormSearch.className = animationFormSearch.className + " animate__bounceOut";
 
 
 

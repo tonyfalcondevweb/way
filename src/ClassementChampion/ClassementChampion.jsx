@@ -3,11 +3,12 @@ import './ClassementChampion.css'
 import { getAllClassement } from '../apiYag/apiYag'
 import { imgChampProfil } from '../apiRiot/util'
 import { imgFormat } from '../apiRiot/util'
+import Loading from '../Loading/Loading'
 
 const ClassementChampion = () => {
 
 
-
+  const [load, setLoad] = useState("load")
   const [classement, setClassement] = useState([])
 
 
@@ -25,6 +26,10 @@ const ClassementChampion = () => {
         console.log(error);
       });
 
+    const timer = setTimeout(() => {
+      setLoad("ok");
+    }, 700);
+    return () => clearTimeout(timer);
 
   }, [])
 
@@ -33,33 +38,51 @@ const ClassementChampion = () => {
 
   const affichageClassement = Object.entries(classement).map(([k, v]) =>
 
-    <div key={k} className="card-classement">
 
-      <div className='rank-classement'>
+    <tr className='table-ClassementChampion-row border  ' key={k}>
+
+      <th scope="row" className='table-rank'>
         {rank++}
-      </div>
+      </th>
 
-      <div className="container-img-classement">
+      <td className='table-ClassementChampion-img'>
         <img className='img-classement rounded-pill border border-3' src={imgChampProfil + v.nom + imgFormat} alt="" />
-      </div>
+      </td>
 
-      <div className="nom-classement">
+      <td className='table-ClassementChampion-nom'>
         {v.nom}
+      </td>
+    </tr>
+  )
+
+
+  if (load == "load") {
+    return (
+    <div className='container-loading'>
+      <div className="loading">
+
+        <Loading />
+        
+      </div>
+    </div>
+    )
+  }
+
+  else {
+    return (
+
+      <div className="table-reponsive container-table-ClassementChampion animate__animated animate__fadeIn">
+        <table className='table table-ClassementChampion'>
+          <tbody>
+
+            {affichageClassement}
+
+          </tbody>
+        </table>
       </div>
 
-    </div>
-  )
-
-
-
-
-  return (
-
-
-    <div className='container-ClassementChampion border-0 rounded'>
-      {affichageClassement}
-    </div>
-  )
+    )
+  }
 }
 
 export default ClassementChampion

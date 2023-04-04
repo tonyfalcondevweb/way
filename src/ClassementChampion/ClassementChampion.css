@@ -1,48 +1,59 @@
-
-
-
-.container-ClassementChampion{
-    margin: 4rem 40rem 0 40rem;
-    padding: 0.4rem 0;
+.container-table-ClassementChampion {
+    margin: 5.5rem 45rem 0 45rem;
     background-color: #3c293e;
 }
 
-.card-classement{
-    display: flex;
-    justify-content: center;
+.table-ClassementChampion {
+    width: 100%;
+    color: white;
+    padding: 0;
+    margin: 0;
 }
 
 
 
 
-.rank-classement{
-    padding-right: 3rem;
-    width: 100%;
+
+.table-rank {
     text-align: end;
-    line-height: 4.7rem;
-    font-size: 1.5rem;
-}
-
-.container-img-classement{
-    line-height: 4.7rem;
-}
-
-.img-classement{
-    width: 65px;
-}
-
-.nom-classement{
-    padding-left: 3rem;
-    width: 100%;
-    line-height: 4.7rem;
-    font-size: 1.5rem;
+    vertical-align: middle;
+    font-size: 1.4rem;
 }
 
 
-/* @media screen and (max-width: 1870px) {
+.table-ClassementChampion-img {
+    text-align: center;
+}
 
-    .container-ClassementChampion {
-        margin: 4rem 20% 0 20%;
+.img-classement {
+    width: 60px;
+}
+
+
+
+.table-ClassementChampion-nom {
+    text-align: start;
+    vertical-align: middle;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 1870px) {
+
+    .container-table-ClassementChampion {
+        margin: 5.5rem 30% 0 30%;
     }
 
-} */
+}
+
+
+@media screen and (max-width: 730px) {
+
+    html {
+        width: 100%;
+    }
+
+    .container-table-ClassementChampion {
+        margin: 5.5rem 0rem 0rem 0rem;
+    }
+}
