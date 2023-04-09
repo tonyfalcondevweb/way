@@ -6,6 +6,7 @@ import { getAllCategorie, getAllChampion, getAllClassement } from '../apiYag/api
 import ListChamp from '../ListChamp/ListChamp';
 import ClassementChampion from '../ClassementChampion/ClassementChampion';
 
+
 const Home = () => {
 
 
@@ -21,8 +22,9 @@ const Home = () => {
 
   const [allCategorieYagApi, setAllCategorieYagApi] = useState([]);
 
-  // permet d'avoir la validation de recherche
+  // Permet d'avoir la validation de recherche
   const [boutonRecherche, setBoutonRecherche] = useState("");
+
 
 
 

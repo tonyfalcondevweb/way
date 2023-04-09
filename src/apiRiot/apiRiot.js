@@ -2,6 +2,8 @@ import axios from "axios";
 
 export const url = "/api/"
 export const urlMastery = "/mastery/"
+export const urlReamls = "/realms"
+export const urlChampList = "/champion/"
 
 const apiValue = import.meta.env.VITE_VERCEL_ENV_RIOT;
 
@@ -17,4 +19,15 @@ export const masteryRequest = (inputs) => {
         "X-Riot-Token" : apiValue
     } };
     return axios.get( urlMastery + inputs + "/top?count=5", config);
+}
+
+
+
+export const getRealms = () => {
+    return axios.get(urlReamls);
+}
+
+export const getChampListRiot = (inputs) => {
+
+    return axios.get(urlChampList + inputs + "/data/fr_FR/champion.json");
 }

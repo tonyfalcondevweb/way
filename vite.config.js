@@ -20,6 +20,25 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/mastery/, ''),
       },
 
+      "/realms": {
+        target: "https://ddragon.leagueoflegends.com/realms/euw.json",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/realms/, ''),
+      },
+
+
+      "/champion/": {
+        target: "https://ddragon.leagueoflegends.com/cdn/",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/champion/, ''),
+      },
+
+
+
+
+
+
+
 
       "/categorie": {
         target: "https://yagapi-production.up.railway.app/yagAPI/get",
@@ -43,8 +62,8 @@ export default defineConfig({
       },
 
       "/compte": {
-        // target: "https://yagapi-production.up.railway.app/yagAPI/post",
-        target: "http://localhost:8080/yagAPI/post",
+        target: "https://yagapi-production.up.railway.app/yagAPI/post",
+        // target: "http://localhost:8080/yagAPI/post",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/compte/, ''),
       },
