@@ -10,6 +10,8 @@ export const urlPostCompte = "/compte";
 
 export const urlPostChampionAdd = "/addChampion";
 
+export const urlPostLoginAdmin = "/loginAdmin";
+
 
 export const getAllCategorie = () => {
     return axios.get(urlGetAllCategorie);
@@ -37,4 +39,9 @@ export const saveCompte = (inputs) => {
 export const postChampionAdd = (inputs) => {
 
     return axios.post(urlPostChampionAdd,inputs);
+}
+
+export const postLoginAdmin = (inputs) => {
+
+    return axios.post(urlPostLoginAdmin,inputs);
 }

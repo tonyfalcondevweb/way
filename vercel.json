@@ -9,6 +9,14 @@
             "destination": "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/:path"
         },
         {
+            "source": "/realms:path(.*)",
+            "destination": "https://ddragon.leagueoflegends.com/realms/euw.json:path"
+        },
+        {
+            "source": "/champion/:path(.*)",
+            "destination": "https://ddragon.leagueoflegends.com/cdn/:path"
+        },
+        {
             "source": "/categorie:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/get/categorie:path"
         },
@@ -17,12 +25,20 @@
             "destination": "https://yagapi-production.up.railway.app/yagAPI/get/champion:path"
         },
         {
+            "source": "/classement:path(.*)",
+            "destination": "https://yagapi-production.up.railway.app/yagAPI/get/champion/classement:path"
+        },
+        {
             "source": "/compte:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/post/compte:path"
         },
         {
-            "source": "/classement:path(.*)",
-            "destination": "https://yagapi-production.up.railway.app/yagAPI/get/champion/classement:path"
+            "source": "/addChampion:path(.*)",
+            "destination": "https://yagapi-production.up.railway.app/yagAPI/post/champion/add:path"
+        },
+        {
+            "source": "/loginAdmin:path(.*)",
+            "destination": "https://yagapi-production.up.railway.app/yagAPI/post/loginAdmin:path"
         },
         {
             "source": "/(.*)",

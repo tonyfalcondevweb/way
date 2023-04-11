@@ -64,6 +64,8 @@ const Home = () => {
     return (
 
       <div className='solo'>
+              Faire le css reponsive de tout Admin
+              Faire les regex coté front et back pour les données entrées dans le login admin
         <div className='solo-formsearch animate__animated animate__backInDown'>
 
           <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />

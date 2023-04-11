@@ -54,13 +54,6 @@ export default defineConfig({
         // rewrite: (path) => path.replace(/^\/champion/, ''),
       },
 
-      "/classement": {
-        // target: "https://yagapi-production.up.railway.app/yagAPI/get/champion",
-        target: "http://localhost:8080/yagAPI/get/champion",
-        changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/classement/, ''),
-      },
-
       "/compte": {
         // target: "https://yagapi-production.up.railway.app/yagAPI/post",
         target: "http://localhost:8080/yagAPI/post",
@@ -73,6 +66,14 @@ export default defineConfig({
         target: "http://localhost:8080/yagAPI/post/champion/add",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/addChampion/, ''),
+      },
+
+
+      "/loginAdmin": {
+        // target: "https://yagapi-production.up.railway.app/yagAPI/post",
+        target: "http://localhost:8080/yagAPI/post/",
+        changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/addChampion/, ''),
       },
       
     },

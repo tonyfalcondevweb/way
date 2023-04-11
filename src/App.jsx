@@ -4,6 +4,7 @@ import Home from './Home/Home';
 import NotFound from './NotFound/NotFound';
 import GestionChampions from './Admin/GestionChampions/GestionChampions';
 import HomeAdmin from './Admin/HomeAdmin/HomeAdmin';
+import LoginAdmin from './Admin/LoginAdmin/LoginAdmin';
 
 
 function App() {
@@ -17,10 +18,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-
                 <Routes>
                   <Route exact path='/' element={<Home />} />
-                  {/* <Route exact path='/admin' element={<HomeAdmin />} /> */}
+                  <Route exact path='/admin' element={<LoginAdmin />} />
                   <Route exact path='/:path' element={<NotFound/>} />
                 </Routes>
 

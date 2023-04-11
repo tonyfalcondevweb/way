@@ -1,0 +1,24 @@
+
+
+
+.container-login{
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-login{
+    padding: 2rem;
+    background-color: #61365991;
+    box-shadow: var(--shadow-elevation-medium);
+    display: flex;
+}
+
+.input-login{
+    
+}
+
+.btn-login{
+    color: whitesmoke;
+    background-color: #613659;
+}
