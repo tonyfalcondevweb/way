@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { masteryRequest, summonerRequest } from '../apiRiot/apiRiot';
-import { imgChampProfil, imgFormat } from '../apiRiot/util';
+import { getImg, imgChampProfil, imgFormat } from '../apiRiot/util';
 import { saveCompte } from '../apiYag/apiYag';
 import Loading from '../Loading/Loading';
 import './ResultSearch.css'
@@ -44,7 +44,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
-
+    console.log(listChampMasteryId);
 
 
 
@@ -112,8 +112,11 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
                     setErreur({ nom: "maitrise-champ", message: "Trop peu de champions maîtrisés." });
                     setLoad(actual => "ok");
                 }
+                else {
+                    setlistChampMasteryId(actual => response.data);
+                }
 
-                setlistChampMasteryId(actual => response.data);
+
 
             }).catch(error => {
                 console.log("Erreur sur l'obtention de la liste des champions maitrisés de l'invocateur");
@@ -218,7 +221,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
             <div key={k} className={"champ animate__animated animate__fadeInUpBig card" + k}>
 
                 <div className='container-img-champ'>
-                    <img className='champ-img rounded-pill border border-3' src={imgChampProfil + v.baseName + imgFormat} alt="" />
+                    <img className='champ-img rounded-pill border border-3' src={getImg(v.baseName)} alt="" />
                 </div>
 
 

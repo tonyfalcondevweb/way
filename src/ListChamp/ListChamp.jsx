@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { imgChampProfil, imgFormat } from '../apiRiot/util';
+import { getImg, imgChampProfil, imgFormat } from '../apiRiot/util';
 import './ListChamp.css'
 import Loading from '../Loading/Loading';
 
@@ -12,6 +12,7 @@ const ListChamp = ({ allChampYagApi }) => {
 
     const [load, setLoad] = useState("load")
     const [searchChamp, setSearchChamp] = useState(allChampYagApi)
+    
 
 
     useEffect(() => {
@@ -44,7 +45,7 @@ const ListChamp = ({ allChampYagApi }) => {
             <tr className='table-ListChamp-row' key={k}>
 
                 <th scope="row" className='table-img'>
-                    <img className='img-listChamp rounded-pill border border-3' src={imgChampProfil + v.nom + imgFormat} alt="" />
+                    <img className='img-listChamp rounded-pill border border-3' src={getImg(v.nom)} alt="" />
                 </th>
 
                 <td className='table-nom'>

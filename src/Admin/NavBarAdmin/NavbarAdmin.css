@@ -1,0 +1,20 @@
+
+
+
+
+
+.navbar-admin{
+    background-color: #61365991;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 18rem;
+    text-align: center;
+}
+
+.navbar-admin-link{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    line-height: 3rem;
+}

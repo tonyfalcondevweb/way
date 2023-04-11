@@ -22,7 +22,7 @@ function App() {
 
                 <Routes>
                   <Route exact path='/' element={<Home />} />
-                  <Route exact path='/admin' element={<HomeAdmin />} />
+                  {/* <Route exact path='/admin' element={<HomeAdmin />} /> */}
                   <Route exact path='/:path' element={<NotFound/>} />
                 </Routes>
 

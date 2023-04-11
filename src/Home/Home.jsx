@@ -142,7 +142,6 @@ const Home = () => {
         <div>
 
           <div className='duo-container-bot'>
-
             <ClassementChampion />
           </div>
 

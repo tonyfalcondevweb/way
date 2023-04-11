@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './HomeAdmin.css'
+import NavbarAdmin from '../NavBarAdmin/NavbarAdmin'
+import GestionChampions from '../GestionChampions/GestionChampions'
 
 const HomeAdmin = () => {
 
@@ -7,31 +9,46 @@ const HomeAdmin = () => {
 
 
 
-  const [composantLive, setComposantLive] = useState("")
+  const [composantLive, setComposantLive] = useState("Home")
 
 
 
 
 
 
+  if (composantLive == "Home") {
 
+    return (
+      <div className='home-admin'>
 
-  return (
-    <div className='home-admin'>
+        <div className='container-nav'>
 
-      <div className='container-nav'>
+          <NavbarAdmin setComposantLive={setComposantLive} />
 
-        <nav className='navbar-admin'>
-          <a>Gestion des champions</a>
-        </nav>
-
+        </div>
       </div>
+    )
 
+  }
 
+  else if (composantLive == "GestionChampions") {
 
+    return (
+      <div className='home-admin'>
 
-    </div>
-  )
+        <div className='container-nav'>
+          <NavbarAdmin setComposantLive={setComposantLive} />
+        </div>
+
+        <div className='container-body-admin'>
+
+          <GestionChampions />
+
+        </div>
+      </div>
+    )
+
+  }
 }
 
 export default HomeAdmin

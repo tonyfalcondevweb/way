@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ClassementChampion.css'
 import { getAllClassement } from '../apiYag/apiYag'
-import { imgChampProfil } from '../apiRiot/util'
+import { getImg, imgChampProfil } from '../apiRiot/util'
 import { imgFormat } from '../apiRiot/util'
 import Loading from '../Loading/Loading'
 
@@ -46,7 +46,7 @@ const ClassementChampion = () => {
       </th>
 
       <td className='table-ClassementChampion-img'>
-        <img className='img-classement rounded-pill border border-3' src={imgChampProfil + v.nom + imgFormat} alt="" />
+        <img className='img-classement rounded-pill border border-3' src={getImg(v.nom)} alt="" />
       </td>
 
       <td className='table-ClassementChampion-nom'>
