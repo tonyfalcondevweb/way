@@ -5,7 +5,7 @@ export const urlMastery = "/mastery/"
 export const urlReamls = "/realms"
 export const urlChampList = "/champion/"
 
-const apiValue = import.meta.env.VITE_VERCEL_ENV_RIOT;
+const apiValue = import.meta.env.VITE_REACT_APP_RIOT_TOKEN_VALUE;
 
 export const summonerRequest = (inputs) => {
     const config = { headers : {        

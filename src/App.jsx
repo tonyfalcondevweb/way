@@ -16,7 +16,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-      {import.meta.env.VITE_REACT_APP_RIOT_TOKEN_VALUE}
 
 
                 <Routes>
