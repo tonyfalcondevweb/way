@@ -4,16 +4,17 @@ import { getAllCategorie, getAllChampion, postChampionAdd } from '../../apiYag/a
 import './GestionChampions.css'
 import Loading from '../../Loading/Loading';
 import { getImg } from '../../apiRiot/util';
+import { userKey } from '../../util/util';
 
-const GestionChampions = () => {
+const GestionChampions = ({ setUser }) => {
 
   const [load, setLoad] = useState("load");
   const [notifAjouter, setNotifAjouter] = useState(null);
 
-  const [versionLive, setVersionLive] = useState("");
+  const [versionLive, setVersionLive] = useState(null);
 
   const [champRiotList, setChampRiotList] = useState({});
-  const [champYagList, setChampYagList] = useState([]);
+  const [champWayList, setChampWayList] = useState([]);
   const [allCategorie, setAllCategorie] = useState([]);
 
 
@@ -24,12 +25,15 @@ const GestionChampions = () => {
 
 
 
+  const logout = () => {
+    localStorage.removeItem(userKey);
+    setUser(actual => null);
+  }
 
 
 
 
-
-
+  // On récupère la dernière version du jeu et les catégorieWAY
   useEffect(() => {
 
     getRealms()
@@ -56,9 +60,11 @@ const GestionChampions = () => {
 
 
 
+  // Apres que la version est récupérer on toute la liste des champions de Riot via la version
+  // On récupère aussi la liste des champions de WAY
   useEffect(() => {
 
-    if (versionLive != "") {
+    if (versionLive != null) {
 
       getChampListRiot(versionLive)
         .then(response => {
@@ -77,7 +83,7 @@ const GestionChampions = () => {
           const data = response.data;
 
 
-          setChampYagList(data);
+          setChampWayList(data);
 
 
         }).catch(error => {
@@ -90,41 +96,35 @@ const GestionChampions = () => {
 
 
 
+
+  // Après que la liste "ChampWayList" est établie, on trie la liste "champRiotList" pour qu'elle soit trier comme celle de "ChampWayList"
+  // Et pour chaque champions qui ne font pas partie de "ChampWayList" on les ajoutes dans "NewChamp"
   useEffect(() => {
 
-    if (champYagList.length > 0) {
+    if (champWayList.length > 0) {
 
 
       const trierRiot = Object.entries(champRiotList).sort(([, a], [, b]) => a.key - b.key)
 
 
-      for (let i = champYagList.length; i < trierRiot.length; i++) {
+      for (let i = champWayList.length; i < trierRiot.length; i++) {
         const element = trierRiot[i];
 
-        if (i == champYagList.length) {
+        if (i == champWayList.length) {
           newChamp.push(element);
         }
 
       }
 
-    }
-  }, [champYagList])
-
-
-
-  useEffect(() => {
-
-    if (newChamp.length > 0) {
-
       setLoad('ok')
 
     }
-
-  }, [champYagList])
-
+  }, [champWayList])
 
 
 
+
+  // Une fois que le champion a été validé il l'ajoute à WAY
   useEffect(() => {
 
     if (Object.keys(champion).length > 0 && categorieCollection.length > 0) {
@@ -164,7 +164,7 @@ const GestionChampions = () => {
 
 
 
-
+  // configure les catégories du nouveau champion
   const handleClickCategorie = (event, k) => {
 
 
@@ -202,6 +202,7 @@ const GestionChampions = () => {
 
 
 
+  // ajoute la configuration du nouveau champion
   const handleClickAjouter = (event, nom, key) => {
 
     setChampion({ "nom": nom, "keyRiot": key, categorieCollection });
@@ -238,9 +239,6 @@ const GestionChampions = () => {
 
 
 
-
-
-  console.log(notifAjouter);
 
 
 
@@ -316,59 +314,91 @@ const GestionChampions = () => {
 
 
 
-  else if (load == "ok" && notifAjouter === null) {
+  // si aucun nouveau champ est disponible
+  else if (load == "ok" && notifAjouter === null && newChamp.length == 0) {
 
     return (
-      <div className='gestion-champions'>
+      <div className='container-gestion-champions'>
+        <button className='btn btn-danger text-end' onClick={logout}>Déconnexion</button>
+        <div className='gestion-champions'>
 
-        <div className='card-new-champ'>
+          <div className='card-new-champ'>
 
-          <div className='erreur-container text-danger'>! Vous devez choisir au moins une catégorie !</div>
 
-          {affichageNewChamp}
+            <div className='way-ok rounded'>
+              La version de WAY est à jour !
+            </div>
 
+          </div>
         </div>
       </div>
     )
   }
 
+  // affiche le champion a ajouter
+  else if (load == "ok" && notifAjouter === null) {
+
+    return (
+      <div className='container-gestion-champions'>
+        <button className='btn btn-danger text-end' onClick={logout}>Déconnexion</button>
+
+        <div className='gestion-champions'>
+
+
+
+          <div className='card-new-champ'>
+
+            <div className='erreur-container text-danger'>! Vous devez choisir au moins une catégorie !</div>
+
+            {affichageNewChamp}
+
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // affiche le champion qui vient d'être ajouté
   else if (load == "ok" && notifAjouter !== null) {
 
     return (
-      <div className='gestion-champions'>
+      <div className='container-gestion-champions'>
+        <button className='btn btn-danger text-end' onClick={logout}>Déconnexion</button>
+        <div className='gestion-champions'>
 
-        <div className='card-new-champ'>
-
-
-          <div className='card-gestion-champions border-0 rounded'>
-            <div className='card-top-gestion-champions'>
+          <div className='card-new-champ'>
 
 
-              <div className='container-img-gestion-champion'>
-                <img className='img-gestion-champions rounded-pill border border-3' src={getImg(notifAjouter.nom)} alt="" />
+            <div className='card-gestion-champions border-0 rounded'>
+              <div className='card-top-gestion-champions'>
+
+
+                <div className='container-img-gestion-champion'>
+                  <img className='img-gestion-champions rounded-pill border border-3' src={getImg(notifAjouter.nom)} alt="" />
+                </div>
+
+                <div className='container-info-gestion-champions'>
+
+                  <div className='nom-gestion-champions'>
+                    Nom : {notifAjouter.nom}
+                  </div>
+
+                  <div className='key-gestion-champions'>
+                    Id : {notifAjouter.keyRiot}
+                  </div>
+                </div>
               </div>
 
-              <div className='container-info-gestion-champions'>
+              <div className="notif-ajouter">
 
-                <div className='nom-gestion-champions'>
-                  Nom : {notifAjouter.nom}
-                </div>
+                Ajouté !
 
-                <div className='key-gestion-champions'>
-                  Id : {notifAjouter.keyRiot}
-                </div>
               </div>
             </div>
 
-            <div className="notif-ajouter">
 
-              Ajouté !
 
-            </div>
           </div>
-
-
-
         </div>
       </div>
     )

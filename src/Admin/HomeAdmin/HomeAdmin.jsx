@@ -8,9 +8,7 @@ const HomeAdmin = () => {
 
 
 
-
   const [composantLive, setComposantLive] = useState("Home")
-
 
 
 
@@ -25,6 +23,10 @@ const HomeAdmin = () => {
 
           <NavbarAdmin setComposantLive={setComposantLive} />
 
+        </div>
+
+        <div className='bienvenue'>
+          Bienvenue Admin <i className="bi bi-emoji-smile-fill"></i>
         </div>
       </div>
     )

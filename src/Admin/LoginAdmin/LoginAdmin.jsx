@@ -1,15 +1,50 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './LoginAdmin.css'
 import { postLoginAdmin } from '../../apiYag/apiYag';
-import HomeAdmin from '../HomeAdmin/HomeAdmin';
+import { useRegexLoginAdmin, userEmpty, userKey } from '../../util/util';
+import Loading from '../../Loading/Loading';
+import { useNavigate } from 'react-router-dom';
 
-const LoginAdmin = () => {
+const LoginAdmin = ({ setUser, user }) => {
+
+
+  let navigate = useNavigate();
 
 
 
+  const [load, setLoad] = useState("load");
 
-  const [loginConnect, setLoginConnect] = useState(null);
-  const [loginResponse, setLoginResponse] = useState(null);
+  const [erreur, setErreur] = useState(null)
+
+  const nom = useRef(null);
+  const interneKey = useRef(null);
+
+
+
+  useEffect(() => {
+
+    if (user == userEmpty) {
+
+      setLoad("ok");
+
+    }
+    else if (user !== null) {
+      navigate("/gestion_champions");
+    }
+
+  }, [user])
+  
+
+
+  useEffect(() => {
+
+    if (erreur !== null) {
+      const timer = setTimeout(() => {
+        setErreur(null);
+      }, 3000);
+    }
+  }, [erreur])
+
 
 
 
@@ -18,65 +53,87 @@ const LoginAdmin = () => {
   };
 
 
-
-
-  const handleChangeKeyLogin = (e) => {
-    setLoginConnect({ "keyLog" : e.target.value})
-}
-
-
-
   const handleClickLoginAdmin = () => {
 
-    postLoginAdmin(loginConnect)
-      .then(response => {
-        const data = response.data;
+    const inputs = { nom: nom.current.value, interneKey: interneKey.current.value };
 
-        setLoginResponse(data);
 
-      }).catch(error => {
-        console.log(error);
-      });
+    const regexTestNom = useRegexLoginAdmin(inputs.nom);
+    const regexTestMdp = useRegexLoginAdmin(inputs.interneKey);
+
+
+    if ((regexTestNom && regexTestMdp) === true) {
+      postLoginAdmin(inputs)
+        .then(response => {
+          const data = response.data;
+
+          localStorage.setItem(userKey, JSON.stringify(data));
+          setUser(actual => data);
+
+        }).catch(error => {
+          console.log(error);
+
+          setErreur("Mot de passe invalide");
+        });
+    }
   }
 
 
 
-  console.log(loginConnect);
 
 
 
-  if (loginResponse == true) {
+
+
+
+
+
+
+  if (load == "load") {
 
     return (
+      <div className='gestion-champions'>
 
-    
-          <HomeAdmin />
+        <div className='container-load'>
 
-  
+          <Loading />
+
+        </div>
+      </div>
     )
-    
   }
-  else{
 
+  else if (load == "ok") {
+    
+  
     return (
 
       <div className='container-login'>
-        <form className='rounded form-login' onSubmit={handleSubmit}>
-  
-          <input onChange={handleChangeKeyLogin} className='form-control rounded-end-0 rounded-start input-formSearch input-login' type="text" />
-  
-          <button onClick={handleClickLoginAdmin} className='btn btn-formSearch rounded-start-0 rounded-end-pill'>Valider</button>
-  
-        </form>
+
+        <div className='erreur-login text-danger'>
+          {erreur}
+        </div>
+        <div className="container-form">
+          <form className='rounded form-login' onSubmit={handleSubmit}>
+
+            <div className="input-label-form">
+              <label className="label-form" >Nom :</label>
+              <input type="text" ref={nom} className='form-control rounded input-formSearch input-login' />
+            </div>
+
+            <div className="input-label-form">
+              <label className="label-form" >Key :</label>
+              <input type="password" ref={interneKey} className='form-control rounded input-formSearch input-login' />
+            </div>
+
+            <button onClick={handleClickLoginAdmin} className='btn btn-formSearch rounded-pill'>Valider</button>
+
+          </form>
+        </div>
       </div>
-  
+
     )
-
-  }
-
-
-
-
+  } 
 }
 
 export default LoginAdmin

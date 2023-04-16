@@ -60,6 +60,12 @@ export default defineConfig({
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/compte/, ''),
       },
+      "/classement": {
+        // target: "https://yagapi-production.up.railway.app/yagAPI/get/champion,
+        target: "http://localhost:8080/yagAPI/get/champion",
+        changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/compte/, ''),
+      },
 
       "/addChampion": {
         // target: "https://yagapi-production.up.railway.app/yagAPI/post",
@@ -69,11 +75,11 @@ export default defineConfig({
       },
 
 
-      "/loginAdmin": {
-        // target: "https://yagapi-production.up.railway.app/yagAPI/post",
-        target: "http://localhost:8080/yagAPI/post/",
+      "/login": {
+        // target: "https://yagapi-production.up.railway.app/yagAPI/",
+        target: "http://localhost:8080/yagAPI/",
         changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/addChampion/, ''),
+        // rewrite: (path) => path.replace(/^\/login/, ''),
       },
       
     },

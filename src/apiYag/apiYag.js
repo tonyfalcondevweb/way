@@ -1,4 +1,5 @@
 import axios from "axios";
+import { authHeader } from "../util/util";
 
 export const urlGetAllCategorie = "/categorie";
 
@@ -10,7 +11,7 @@ export const urlPostCompte = "/compte";
 
 export const urlPostChampionAdd = "/addChampion";
 
-export const urlPostLoginAdmin = "/loginAdmin";
+export const urlPostLoginAdmin = "/login";
 
 
 export const getAllCategorie = () => {
@@ -38,7 +39,9 @@ export const saveCompte = (inputs) => {
 
 export const postChampionAdd = (inputs) => {
 
-    return axios.post(urlPostChampionAdd,inputs);
+    const config = { headers : authHeader()};
+
+    return axios.post(urlPostChampionAdd,inputs,config);
 }
 
 export const postLoginAdmin = (inputs) => {

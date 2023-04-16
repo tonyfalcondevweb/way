@@ -2,23 +2,57 @@
 
 
 .container-login{
-    padding-top: 15rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.erreur-login{
+    height: 2rem;
+}
+
+.container-form{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 17rem;
+    width: 100%;
 }
 
 .form-login{
-    padding: 2rem;
-    background-color: #61365991;
-    box-shadow: var(--shadow-elevation-medium);
-    display: flex;
+    width: 22rem;
 }
 
-.input-login{
-    
+.input-label-form{
+    margin: 2rem 0;
+}
+
+.label-form{
+    padding-bottom: 0.5rem;
 }
 
 .btn-login{
     color: whitesmoke;
     background-color: #613659;
+}
+
+
+@media screen and (max-width: 1920px) {
+
+    .container-login{
+        margin: 0 23vw;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .container-login{
+        margin: 0;
+    }
+
+    .form-login{
+        padding: 1.5rem 1rem;
+    }
+
 }

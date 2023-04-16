@@ -38,7 +38,7 @@
         },
         {
             "source": "/loginAdmin:path(.*)",
-            "destination": "https://yagapi-production.up.railway.app/yagAPI/post/loginAdmin:path"
+            "destination": "https://yagapi-production.up.railway.app/yagAPI/login:path"
         },
         {
             "source": "/(.*)",

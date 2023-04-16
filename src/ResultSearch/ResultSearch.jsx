@@ -44,7 +44,19 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
-    console.log(listChampMasteryId);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,26 +113,32 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
     // Obtient les id et maitrise des champ via l'id d'invocateur
     useEffect(() => {
 
-
-        // Requête RiotAPI afin d'obtenir ke top5 des champs les plus maitrisés
-        // Si l'invocateur à moins de 5 champs maitrisés alors un message d'erreur se créer
-        masteryRequest(summonerId)
-            .then(response => {
-                const data = response;
-
-                if (data.data.length < 5) {
-                    setErreur({ nom: "maitrise-champ", message: "Trop peu de champions maîtrisés." });
-                    setLoad(actual => "ok");
-                }
-                else {
-                    setlistChampMasteryId(actual => response.data);
-                }
+        if (summonerId !== null) {
 
 
 
-            }).catch(error => {
-                console.log("Erreur sur l'obtention de la liste des champions maitrisés de l'invocateur");
-            });
+
+            // Requête RiotAPI afin d'obtenir ke top5 des champs les plus maitrisés
+            // Si l'invocateur à moins de 5 champs maitrisés alors un message d'erreur se créer
+            masteryRequest(summonerId)
+                .then(response => {
+                    const data = response;
+
+                    if (data.data.length < 5) {
+                        setErreur({ nom: "maitrise-champ", message: "Trop peu de champions maîtrisés." });
+                        setLoad(actual => "ok");
+                    }
+                    else {
+                        setlistChampMasteryId(actual => response.data);
+                    }
+
+
+
+                }).catch(error => {
+                    console.log("Erreur sur l'obtention de la liste des champions maitrisés de l'invocateur");
+                });
+
+        }
 
     }, [summonerId])
 
@@ -194,6 +212,23 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
             setLoad(actual => "ok");
         }
     }, [champResult])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -309,6 +344,21 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 

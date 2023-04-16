@@ -18,6 +18,13 @@
     font-size: 1.3rem;
 }
 
+.way-ok{
+    margin-top: 5rem;
+    padding: 2rem;
+    background-color: #61365991;
+    box-shadow: var(--shadow-elevation-medium);
+}
+
 .container-load{
     padding: 11rem 0;
 }
@@ -129,10 +136,10 @@
     line-height: 10rem;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 300px) {
 
-
-    
-
+    .way-ok{
+        font-size: 5vw;
+    }
 
 }
