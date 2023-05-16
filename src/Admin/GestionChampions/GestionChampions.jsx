@@ -5,9 +5,10 @@ import './GestionChampions.css'
 import Loading from '../../Loading/Loading';
 import { getImg } from '../../apiRiot/util';
 import { userKey } from '../../util/util';
+import { useNavigate } from 'react-router-dom';
 
 const GestionChampions = ({ setUser }) => {
-
+  let navigate = useNavigate();
   const [load, setLoad] = useState("load");
   const [notifAjouter, setNotifAjouter] = useState(null);
 
@@ -28,6 +29,8 @@ const GestionChampions = ({ setUser }) => {
   const logout = () => {
     localStorage.removeItem(userKey);
     setUser(actual => null);
+
+    navigate("/")
   }
 
 
