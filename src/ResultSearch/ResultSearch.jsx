@@ -118,7 +118,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
-            // Requête RiotAPI afin d'obtenir ke top5 des champs les plus maitrisés
+            // Requête RiotAPI afin d'obtenir le top5 des champs les plus maitrisés
             // Si l'invocateur à moins de 5 champs maitrisés alors un message d'erreur se créer
             masteryRequest(summonerId)
                 .then(response => {
@@ -193,12 +193,12 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
-            // Obtient le premier champion maitrisé et nom d'invocateur pour les saves dans la bdd via YagAPI
+            // Obtient le premier champion maitrisé et nom d'invocateur pour les save dans la bdd via YagAPI
             compteSaveYag.idChampion = champResult[0].idYagApi;
 
             saveCompte(compteSaveYag).then(
                 response => {
-
+                    console.log(response);
                 }
             ).catch(
                 err => {

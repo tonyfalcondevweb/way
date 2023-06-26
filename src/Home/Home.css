@@ -1,5 +1,5 @@
 .solo {
-    padding: 25rem 0;
+    padding: 10rem 0;
     overflow: hidden;
 }
 
@@ -9,12 +9,16 @@
 }
 
 
-.duo-container-top {
-
-}
-
 
 .duo-container-bot{
     overflow: hidden;
 }
 
+.logo-home{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.logo-png{
+    width: 200px;
+}

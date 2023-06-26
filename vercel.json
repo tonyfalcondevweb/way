@@ -37,7 +37,7 @@
             "destination": "https://yagapi-production.up.railway.app/yagAPI/post/champion/add:path"
         },
         {
-            "source": "/loginAdmin:path(.*)",
+            "source": "/login:path(.*)",
             "destination": "https://yagapi-production.up.railway.app/yagAPI/login:path"
         },
         {

@@ -77,7 +77,7 @@ export default defineConfig({
 
       "/login": {
         // target: "https://yagapi-production.up.railway.app/yagAPI/",
-        target: "http://localhost:8080/yagAPI/",
+        target: "http://localhost:8080/yagAPI",
         changeOrigin: true,
         // rewrite: (path) => path.replace(/^\/login/, ''),
       },

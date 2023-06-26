@@ -10,8 +10,6 @@ const LoginAdmin = ({ setUser, user }) => {
 
   let navigate = useNavigate();
 
-
-
   const [load, setLoad] = useState("load");
 
   const [erreur, setErreur] = useState(null)
@@ -55,26 +53,35 @@ const LoginAdmin = ({ setUser, user }) => {
 
   const handleClickLoginAdmin = () => {
 
+    // inputs saisie par l'utilisateur qui vont être envoyé dans la requête
     const inputs = { nom: nom.current.value, interneKey: interneKey.current.value };
 
-
+    // fonction qui test les saisies, un boolean est retourné
     const regexTestNom = useRegexLoginAdmin(inputs.nom);
     const regexTestMdp = useRegexLoginAdmin(inputs.interneKey);
 
 
+    // si les saisies sont correctes la requête est lancé et si la requête est valide l'admin est connecté
+    // sinon un message d'erreur s'affiche
     if ((regexTestNom && regexTestMdp) === true) {
       postLoginAdmin(inputs)
         .then(response => {
+
+          // récuperation des données de la réponse de la requête
           const data = response.data;
 
+          // enregistrement de l'identifiant dans le localStorage
           localStorage.setItem(userKey, JSON.stringify(data));
           setUser(actual => data);
 
         }).catch(error => {
-          console.log(error);
+          console.log(error.response.data.message);
 
           setErreur("Mot de passe invalide");
         });
+    }
+    else{
+      setErreur("Mot de passe invalide");
     }
   }
 
@@ -90,7 +97,6 @@ const LoginAdmin = ({ setUser, user }) => {
 
 
   if (load == "load") {
-
     return (
       <div className='gestion-champions'>
 
@@ -103,9 +109,7 @@ const LoginAdmin = ({ setUser, user }) => {
     )
   }
 
-  else if (load == "ok") {
-    
-  
+  else if (load == "ok") {  
     return (
 
       <div className='container-login'>
@@ -131,7 +135,6 @@ const LoginAdmin = ({ setUser, user }) => {
           </form>
         </div>
       </div>
-
     )
   } 
 }

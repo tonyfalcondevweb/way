@@ -103,8 +103,8 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
                         Menu
                     </button>
                     <ul className="dropdown-menu dropdown-menu-formSearch">
-                        <li><a className="dropdown-item" onClick={handleClickChampion}>Champion</a></li>
-                        <li><a className="dropdown-item" onClick={handleClickClassementChampion}  >Classement</a></li>
+                        <li><div className="dropdown-item" onClick={handleClickChampion}>Champion</div></li>
+                        <li><div className="dropdown-item" onClick={handleClickClassementChampion}  >Classement</div></li>
                     </ul>
                 </div>
                 <input className='form-control rounded-end-0 rounded-start-0 input-formSearch' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" />

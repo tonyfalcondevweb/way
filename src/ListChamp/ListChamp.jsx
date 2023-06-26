@@ -17,7 +17,6 @@ const ListChamp = ({ allChampYagApi }) => {
 
     useEffect(() => {
 
-
         const timer = setTimeout(() => {
             setLoad("ok");
         }, 700);
@@ -66,18 +65,14 @@ const ListChamp = ({ allChampYagApi }) => {
 
 
     if (load == "load") {
-
         return (
             <div className='container-loading'>
                 <div className="loading">
                     <Loading />
                 </div>
             </div>
-
         )
-
     }
-
     else {
         return (
             <div className='container-listChamp animate__animated animate__fadeIn'>
@@ -98,13 +93,8 @@ const ListChamp = ({ allChampYagApi }) => {
 
                         </tbody>
 
-
                     </table>
-
-
                 </div>
-
-
             </div>
         )
     }

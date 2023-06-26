@@ -10,16 +10,10 @@ import ClassementChampion from '../ClassementChampion/ClassementChampion';
 const Home = () => {
 
 
-  // mettre un loading tant que l'apiYAG (allChampYagApi) n'a pas chargé
-
 
   const [affichageComposant, setAffichageComposant] = useState("Solo");
-
   const [nomInvocateur, setNomInvocateur] = useState("");
-
-
   const [allChampYagApi, setAllChampYagApi] = useState([]);
-
   const [allCategorieYagApi, setAllCategorieYagApi] = useState([]);
 
   // Permet d'avoir la validation de recherche
@@ -65,7 +59,10 @@ const Home = () => {
 
       <div className='solo'>
         <div className='solo-formsearch animate__animated animate__backInDown'>
-        faire un regex pour vérifier les données qui sont save dans Compte WAY API
+          {/* faire un regex pour vérifier les données qui sont save dans Compte WAY API */}
+          <div className='logo-home'>
+            <img className='logo-png border rounded' width="200" height="200" src="../../public/yag.png" alt="logo du site way"/>
+          </div>
           <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />
 
         </div>
