@@ -75,11 +75,8 @@ const LoginAdmin = ({ setUser, user }) => {
           setUser(actual => data);
 
         }).catch(error => {
-<<<<<<< HEAD
           console.log(error.response.data.message);
-=======
-          console.log(error.response.data.error);
->>>>>>> ec929da5726bec4f3956a174a6a0191664ef072c
+
 
           setErreur("Mot de passe invalide");
         });

@@ -59,7 +59,6 @@ const Home = () => {
 
       <div className='solo'>
         <div className='solo-formsearch animate__animated animate__backInDown'>
-          {/* faire un regex pour vérifier les données qui sont save dans Compte WAY API */}
           <div className='logo-home'>
             <img className='logo-png border rounded' width="200" height="200" src="../../public/yag.png" alt="logo du site way"/>
           </div>
