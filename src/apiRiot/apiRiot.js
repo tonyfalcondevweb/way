@@ -5,7 +5,7 @@ export const urlMastery = "/mastery/"
 export const urlReamls = "/realms"
 export const urlChampList = "/champion/"
 
-const apiValue = "RGAPI-80d16639-21f6-46af-8f1f-416d5bf9f2c1";
+const apiValue = import.meta.env.VITE_API_KEY;
 
 
 export const summonerRequest = (inputs) => {
