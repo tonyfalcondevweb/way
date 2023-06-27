@@ -107,9 +107,9 @@ const FormSearch = ({ affichageComposant, setAffichageComposant, nomInvocateur, 
                         <li><div className="dropdown-item" onClick={handleClickClassementChampion}  >Classement</div></li>
                     </ul>
                 </div>
-                <label htmlFor="invocateur"></label >
-                <button onClick={handleClickDuo} type="submit" className="btn btn-formSearch rounded-start-0 rounded-end-pill">WAY?</button>
+                {/* <label htmlFor="invocateur"></label > */}
                 <input id='invocateur' className='form-control rounded-end-0 rounded-start-0 input-formSearch' value={nomInvocateur} onChange={handleChangenomInvocateur} type="text" placeholder="Nom D'invocateur" />
+                <button onClick={handleClickDuo} type="submit" className="btn btn-formSearch rounded-start-0 rounded-end-pill">WAY?</button>
             </form>
 
 
