@@ -8,6 +8,5 @@ In League of Legends, you have so many characters and these characters have diff
 
 
 /// ATTENTION \\\
-
-If you use VITE JS : 
-You need to create a file ".env" (or add in your) and put in "VITE_API_KEY=*YourRiotAPIKEY*" (rename the environment variable "VITE_API_KEY" if you don't use VITEJS).
+If you use VITE JS : <br>
+You need to create a file ".env" (or add in your) and put in "VITE_API_KEY=*YourRiotAPIKEY*" (rename the environment variable "VITE_API_KEY" if you don't use VITE JS).
