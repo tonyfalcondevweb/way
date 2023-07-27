@@ -138,6 +138,7 @@ const GestionChampions = ({ setUser }) => {
 
           setNotifAjouter(data)
 
+
         }).catch(error => {
           console.log(error);
         });
@@ -148,6 +149,7 @@ const GestionChampions = ({ setUser }) => {
 
 
 
+  console.log(champion);
 
 
 
