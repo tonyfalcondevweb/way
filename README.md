@@ -1,6 +1,4 @@
 # way
-
-For my school project I decided to create a project around my passion which is gaming and I picked League of Legends.
 In League of Legends, you have so many characters and these characters have different play styles. For this project, I created categories to rank all characters
 
 
