@@ -49,7 +49,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
 
 
 
-
+    console.log(summonerId);
 
 
 
@@ -93,9 +93,9 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
             summonerRequest(nomInvocateur)
                 .then(response => {
 
-                    compteSaveYag.nom = response.data.name;
+                    compteSaveYag.nom = response.data.gameName + "/"+ response.data.tagLine;
 
-                    setsummonerId(response.data.id);
+                    setsummonerId(response.data.puuid);
 
                 }).catch(error => {
                     setErreur({ nom: "introuvable", message: "Nom d'invocateur introuvable." });
@@ -132,7 +132,7 @@ const ResultSearch = ({ nomInvocateur, boutonRecherche, setBoutonRecherche, allC
                         setlistChampMasteryId(actual => response.data);
                     }
 
-
+                    console.log(response);
 
                 }).catch(error => {
                     console.log("Erreur sur l'obtention de la liste des champions maitrisés de l'invocateur");

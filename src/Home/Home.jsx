@@ -60,7 +60,6 @@ const Home = () => {
       <div className='solo'>
         <div className='solo-formsearch animate__animated animate__backInDown'>
           <div className='logo-home'>
-            test
             <img className='logo-png border rounded' width="200" height="200" src="/yag.png" alt="logo du site way"/>
           </div>
           <FormSearch affichageComposant={affichageComposant} setAffichageComposant={setAffichageComposant} nomInvocateur={nomInvocateur} setNomInvocateur={setNomInvocateur} boutonRecherche={boutonRecherche} setBoutonRecherche={setBoutonRecherche} />

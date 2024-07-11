@@ -9,13 +9,14 @@ export default defineConfig({
   server: {
     proxy: {
       "/api/": {
-        target: "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/",
+        // target: "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/",
+        target: "https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
 
       "/mastery/": {
-        target: "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/",
+        target: "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/mastery/, ''),
       },
