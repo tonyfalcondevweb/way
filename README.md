@@ -1,5 +1,5 @@
-# way
-In League of Legends, you have so many characters and these characters have different play styles. For this project, I created categories to rank all characters
+# way | Who Are You
+In League of Legends, you have so many characters and these characters have different play styles. For this project, I created categories to rank all characters by users
 
 
 
